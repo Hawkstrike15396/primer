@@ -570,7 +570,7 @@ The rows from our data have covariates and two potential outcomes. (By definitio
 
 **Validity** is the consistency, or lack there of, in the columns of your data set and the corresponding columns in your Preceptor Table. In order to consider the two data sets to be drawn from the same population, the columns from one must have a *valid correspondence* with the columns in the other. Validity, if true (or at least reasonable), allows us to construct the *Population Table*.
 
-Consider the potential outcomes: attitude toward immigration under treatment and control. How is this measured? In this case, we use answers to survey questions. Our we going to use the *exact* same questions in 2024 as were used in our data from 2012? Probably not. Even if we used the same wording, will the *meaning* of the words be constant. Almost certainly not! The word "undocumented" could mean something very different in the America before the election of Donald Trump in 2016. Consider the treatment: exposure to Spanish speakers on a train platform. The speakers used in 2012 will not be available in 2024 if we were to redo the experiment. 
+Consider the potential outcomes: attitude toward immigration under treatment and control. How is this measured? In this case, we use answers to survey questions. Are we going to use the *exact* same questions in 2024 as were used in our data from 2012? Probably not. Even if we used the same wording, will the *meaning* of the words be constant? Almost certainly not! The word "undocumented" could mean something very different in the America before the election of Donald Trump in 2016. Consider the treatment: exposure to Spanish speakers on a train platform. The speakers used in 2012 will not be available in 2024 if we were to redo the experiment. 
 
 *Validity* is an assumption which allows us to "stack" the data and the Preceptor Table on top of one another, into a single Population Table. The variables from each source, while not identical in meaning, are similar enough that we can treat them *as if* they are the same thing. 
 
@@ -581,7 +581,7 @@ Consider the potential outcomes: attitude toward immigration under treatment and
 
 We will be constructing *models*, mathematical relationships between different variables. For example, perhaps the treatment has a greater effect on women than on men. However, we can only directly observe that relationship in the data which we have, from 2012. We must *assume* stability in order to use the model created from the data to make inferences about other rows in the Population Table, specifically the rows corresponding to the Preceptor Table.
 
-Must the world be stable? No! In fact, the world is always changing! The *stability* assumption, in this case, is a claim that the world has not changes that much between 2012 and 2024. Stability applies, not just to the data and the Preceptor Table rows, but to the entire Population Table. *Stability allows us to ignore the passage of time.*
+Must the world be stable? No! In fact, the world is always changing! The *stability* assumption, in this case, is a claim that the world has not changed that much between 2012 and 2024. Stability applies, not just to the data and the Preceptor Table rows, but to the entire Population Table. *Stability allows us to ignore the passage of time.*
 
 ### Representativeness
 
@@ -589,7 +589,7 @@ Must the world be stable? No! In fact, the world is always changing! The *stabil
 
 <!-- Should we use the word unbiasedness instead? -->
 
-Representativeness, or the lack thereof, concerns two relationship, among the rows in the Population Table. The first is between the Preceptor Table and the other rows. The second is between our data and the other rows. Ideally, we would like both the Preceptor Table *and* our data to be random samples from the population. Sadly, this is almost never the case.
+Representativeness, or the lack thereof, concerns two relationships among the rows in the Population Table. The first is between the Preceptor Table and the other rows. The second is between our data and the other rows. Ideally, we would like both the Preceptor Table *and* our data to be random samples from the population. Sadly, this is almost never the case.
 
 Does the train experiment allow us to calculate a causal effect for people who commute by cars? Can we calculate the causal effect for people in New York City? Before we generalize to a broader population we have to consider if our experimental estimates are applicable beyond our experiment. Maybe we think that commuters in Boston and New York are similar enough to generalize our findings. We could also conclude that people who commute by car are fundamentally different than people who commute by train. If that was true, then we could not say our estimate is true for all commuters because our sample does not accurately *represent* the broader group to which we want to generalize.
 

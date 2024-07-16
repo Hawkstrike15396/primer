@@ -875,6 +875,8 @@ Joint distributions are also mathematical objects that cover a set of outcomes, 
 
 Let's say that you are rolling two six-sided dice simultaneously. Dice 1 is weighted so that there is a 50% chance of rolling a 6 and a 10% chance of each of the other values. Dice 2 is weighted so there is a 50% chance of rolling a 5 and a 10% chance of rolling each of the other values. Let's roll both dice 1,000 times. In previous examples involving two dice, we cared about the sum of results and not the outcomes of the first versus the second dice of each simulation. With a joint distributions, the outcomes for individual dice matter; so instead of 11 possible outcomes on the x-axis of our distribution plot (ranging from 2 to 12), we have 36 outcomes. Furthermore, a 2D probability distribution is not sufficient to represent all of the variables involved, so the joint distribution for this example is displayed using a 3D plot.
 
+# AC: I noticed in the image that the column Dice 1 rolling a 6 and Dice 2 rolling a 5 is missing in the plot
+
 ```{r}
 #| echo: false
 #| eval: false
@@ -1006,7 +1008,7 @@ jd_disease <- tibble(ID = 1:sims, have_disease = rep(c(TRUE, FALSE), 5000)) |>
 jd_disease
 ```
 
-The first step is to simply create an tibble that consists of the simulated data we need to plot our distribution. Keep in mind that in the setting we have two different probabilities and they are completely separate from each other and we want to keep the two probabilities and the disease results in two and only two columns so that we can graph using the `ggplot()` function. And that's why we used the `rep` and `seq` functions when creating the table, we used the `seq` function to set the sequence we wants, in this case is only two numbers, 0.01 (99% accuracy for testing negative if no disease, therefore 1% for testing positive if no disease) and 0.5 (50% accuracy for testing positive/negative if have disease), then we used the `rep` functions to repeat the process 10,000 times for each probability, in total 20,000 times. Note that this number "20,000" also represent the number of observations in our simulated data, we simulated 20,000 results from testing, where 10,000 results from the have-disease group and 10,000 for the no-disease group, we often use the capital N to represent the population, in this simulated data $N=20,000$.
+The first step is to simply create an tibble that consists of the simulated data we need to plot our distribution. Keep in mind that in the setting we have two different probabilities and they are completely separate from each other and we want to keep the two probabilities and the disease results in two and only two columns so that we can graph using the `ggplot()` function. And that's why we used the `rep` and `seq` functions when creating the table, we used the `seq` function to set the sequence we want, which in this case is only two numbers, 0.01 (99% accuracy for testing negative if no disease, therefore 1% for testing positive if no disease) and 0.5 (50% accuracy for testing positive/negative if have disease), then we used the `rep` functions to repeat the process 10,000 times for each probability, in total 20,000 times. Note that this number "20,000" also represents the number of observations in our simulated data, we simulated 20,000 results from testing, where 10,000 results from the have-disease group and 10,000 for the no-disease group, we often use the capital N to represent the population, in this simulated data $N=20,000$.
 
 Plot the joint distribution:
 
@@ -1155,7 +1157,7 @@ Now recalled the question we asked at the start of the session:
 
 By looking at the posterior graph we just create, we can answer this question easily:
 
-*With a positive test, you can be almost 70% sure that you have Probophobia, however there is a good chance about 30% that you receive a false positive, so don't worry too much there is still about a third of hope that you get the wrong result*
+*With a positive test, you can be almost 70% sure that you have Probophobia, however there is a good chance of about 30% that you receive a false positive, so don't worry too much, there is still about a third of hope that you get the wrong result*
 
 Now let's consider the manipulation of this posterior, here is another question.
 Question : *10 people walks up to testing center, 5 of them tested negative, 5 of them tested positive, what is the probability of at least 6 people are actually healthy? *
@@ -1209,7 +1211,7 @@ Imagine that your friend gives you a bag with two marbles. There could either be
 Question: *What is the chance of the bag contains exactly two white marbles, given that when we selected the marbles three times, every time we select a white marble?*
 
 $$ P(\text{2 White Marbles in bag | White Marbles Sampled = 3} ) $$
-Just as during the *Probophobia* models, in order to answer this question, we need to start up with the simulated data and then graphing out the joint distribution of this scenerio because we need to considered all possible outcomes of this model, and then based on the joint distribution we can slice out the the part we want (the conditional distribution) in the end making a posterior graph as well as normalizing it to see the probability.
+Just as during the *Probophobia* models, in order to answer this question, we need to start up with the simulated data and then graph out the joint distribution of this scenario because we need to consider all possible outcomes of this model, and then based on the joint distribution we can slice out the the part we want (the conditional distribution) in the end making a posterior graph as well as normalizing it to see the probability.
 
 Step 1: Simulate the data into an tibble
 
@@ -1434,7 +1436,7 @@ x |>
 
 Either way, the figures show what would have happened if that model --- that $\rho_h = 0.4$ --- were true.
 
-We can do the same thing for all 11 possible models, calculating what would happen if each of them were true. This is somewhat counterfactual since only one of them can be true. Yet this assumption does allow us to create the *joint distribution* of *models which might be true* and of *data which our experiment might generate*. Let's simplify this is p(models, data), although you should keep the precise meaning in mind.
+We can do the same thing for all 11 possible models, calculating what would happen if each of them were true. This is somewhat counterfactual since only one of them can be true. Yet this assumption does allow us to create the *joint distribution* of *models which might be true* and of *data which our experiment might generate*. Let's simplify this as p(models, data), although you should keep the precise meaning in mind.
 
 ```{r}
 #| echo: false
@@ -1592,7 +1594,7 @@ odds |>
     theme_classic()
 ```
 
-Using this Posterior distribution derived from the (wrong way) simulated data, the probability results in 10 or more head is
+Using this Posterior distribution derived from the (wrong way) simulated data, the probability results with 10 or more heads is
 
 ```{r}
 odds |>

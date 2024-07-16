@@ -99,7 +99,7 @@ No battle plan survives first contact with the enemy intact. The same applies to
 
 ### Preceptor Table
 
-> A Preceptor Table is smallest possible table with rows and columns such that, if there is no missing data, our question is easy to answer.
+> A Preceptor Table is the smallest possible table with rows and columns such that, if there is no missing data, our question is easy to answer.
 
 **Predictive Models and Causal Models** are different because predictive models have only one outcome column. Causal models have more than one (potential) outcome column because we need more than one potential outcome in order to estimate a *causal effect*. The first step in a data science problem is to determine if your QoI requires a causal or a predictive model.
 
@@ -397,7 +397,7 @@ Some cases, like these, feature numbers which have a natural interpretation. We 
 
 > *The causal effect of hearing Spanish-speakers is a more conservative attitude toward immigration, a change of about 1.5 ($\pm$ 0.5) on a 15 point scale.*
 
-This is correct, as far as it goes, but we have no idea if 1.5 is a "big" or "small" change. We need some perspective>
+This is correct, as far as it goes, but we have no idea if 1.5 is a "big" or "small" change. We need some perspective. 
 
 > *The causal effect of hearing Spanish-speakers is a more conservative attitude toward immigration, a change of about 1.5 ($\pm$ 0.5) on a 15 point scale. For perspective, the difference between Democrats and Republicans on that same scale is about 2.1.*
 

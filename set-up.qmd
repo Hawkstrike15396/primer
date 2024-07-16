@@ -16,7 +16,7 @@ The *test* which ensures that you have successfully completed this set up is to 
 
 1) Read the [Getting Started](https://ppbds.github.io/primer/getting-started.html) chapter from [The Primer](https://ppbds.github.io/primer/). Follow the instructions, including installing [Rtools](https://cran.r-project.org/bin/windows/Rtools/) if you are using Windows. Read  (and watch the videos from) [*Getting Used to R, RStudio, and R Markdown*](https://ismayc.github.io/rbasics-book/) by Chester Ismay and Patrick C. Kennedy. Note that [R Markdown](https://rmarkdown.rstudio.com/) is the predecessor to [Quarto](https://quarto.org/). Check out [RStudio Essentials Videos](https://rstudio.com/collections/rstudio-essentials/). Most relevant for us are ["Writing code in RStudio"](https://resources.rstudio.com/wistia-rstudio-essentials-2/rstudioessentialsprogrammingpart1-2), ["Projects in RStudio"](https://rstudio.com/resources/webinars/managing-part-1-projects-in-rstudio/) and ["Github and RStudio"](https://rstudio.com/resources/webinars/managing-part-2-github-and-rstudio/). The best reference for R/RStudio/Git/Github issues is always [*Happy Git and GitHub for the useR*](https://happygitwithr.com/).
 
-2) Make sure that your Git/Github connections are good. If you have gone through the key chapters in [Happy Git with R](https://happygitwithr.com/) --- as you should have --- then these may already be OK. If not (or, even if you have), then you need to run `usethis::git_sitrep().`
+2) Make sure that your Git/Github connections are good. If you have gone through the key chapters in [Happy Git with R](https://happygitwithr.com/) --- as you should have --- then these may already be OK. If not (or, even if you have), then you need to run `usethis::git_sitrep()`.
 
 ````
 > library(usethis)   
@@ -150,7 +150,7 @@ At some point, you will be ready to push to the PPBDS organization. However, you
 pr_push()
 ```
 
-This command bundles up a bunch of git commands (which you could do by hand) into one handy step. This command does everything needed to create a "pull request" --- a request from you to me that I accept the changes you are proposing into the repo at **PPBDS/primer** --- and then opens up the web page to show you. **But your are not done!** You must PRESS the green button on that web page, sometimes twice. Until then, the PR has not actually been created. `pr_push()` just does everything before that. The "pr" in `pr_push()` stands for pull request.
+This command bundles up a bunch of git commands (which you could do by hand) into one handy step. This command does everything needed to create a "pull request" --- a request from you to me that I accept the changes you are proposing into the repo at **PPBDS/primer** --- and then opens up the web page to show you. **But you are not done!** You must PRESS the green button on that web page, sometimes twice. Until then, the PR has not actually been created. `pr_push()` just does everything before that. The "pr" in `pr_push()` stands for pull request.
 
 4) I will leave aside for now issues associated with the back-and-forth discussions we might have around your pull request. I will probably just accept it. Your changes will go into the repos at PPBDS and then be distributed to everyone else when they run `pr_merge_main()`.
 
